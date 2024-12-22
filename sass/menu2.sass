@@ -1,0 +1,1136 @@
+@import 'tool'
+//搜尋
+.icon-box
+  padding: 4px 16px
+  background: $Light-gray
+  border-radius: 20px
+  text-align: center
+  cursor: pointer
+  margin-left: 30px
+  &:hover
+    background: $Main-color
+  .info
+    p
+      font-size: 16px
+      color: #fff
+      letter-spacing: 1px
+.search-wrap
+  display: none
+  &.show
+    display: block
+    position: fixed
+    top: 80px
+    right: 17%
+    z-index: 2
+  .search-box
+    min-height: 0px
+    background-color: #666666
+    padding: 20px 60px
+    margin-top: 10px
+    .sb-inner
+      border-bottom: 1px solid #fff
+      padding: 0px 120px 0px 0px
+      position: relative
+      form
+        .sbi-input
+          width: 100%
+          padding: 0px 40px 0px 40px
+          position: relative
+          .sbi-icon 
+            position: absolute
+            top: 10px
+            left: 0px
+            width: 30px
+            height: 30px
+            line-height: 30px
+            font-size: 25px
+            color: #fff
+            text-align: center
+          input 
+            width: 100%
+            height: 50px
+            padding: 0px 10px
+            display: block
+            border: none
+            background-color: transparent
+            outline: none
+            color: #fff
+            font-size: 20px
+            font-weight: 600
+            text-transform: uppercase
+            outline: none
+          input::placeholder
+            color: #fff
+        .sbi-close 
+          position: absolute
+          top: -20px
+          right: 0px
+          width: 40px
+          height: 40px
+          line-height: 40px
+          color: #fff
+          opacity: 0.8
+          cursor: pointer
+          font-size: 30px
+        .sbi-submit 
+          position: absolute
+          top: 0px
+          right: 30px
+          button
+            background-color: transparent
+            cursor: pointer
+            -webkit-transition: all ease 0.3s
+            -o-transition: all ease 0.3s
+            transition: all ease 0.3s
+            outline: none
+            width: 100px
+            border: none
+            color: #fff
+            font-size: 20px        
+.header-area
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 600
+  background: $Sup-color
+  box-shadow: 0px 0px 10px #00000040
+.classynav ul.langbox
+  color: $Dark-gray
+  border-radius: 20px
+  padding: 5px 10px 5px 6px
+  border: solid 1px $Dark-gray
+  margin-left: 30px
+  .globe
+    position: relative
+    right: -4px
+  .lang-line
+    position: relative
+    &::before
+      position: absolute
+      bottom: 1px
+      right: 0px
+      content: "|"   
+      font-size: 14px
+      color: $Dark-gray
+  li a
+    padding: 0 8px 0 0
+    font-size: 16px
+    color: $Dark-gray
+    text-align: center
+    height: auto
+    &:focus, &:hover
+      &::before
+        display: none
+
+.classy-nav-container a
+  -webkit-transition-duration: .5s
+  text-decoration: none
+  outline: 0
+  font-size: 16px
+
+  &:focus, &:hover
+    -webkit-transition-duration: .5s
+    text-decoration: none
+    outline: 0
+
+ol li, ul li
+  list-style: none
+
+.bg-img
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+
+.bg-transparent
+  background-color: transparent !important
+
+.classy-nav-container
+  position: relative
+  z-index: 100
+
+.classy-btn
+  background-color: $Main-color
+
+.classy-nav-container
+  &.box-skins .classynav > ul > li
+    background-color: $Main-color
+
+  *
+    box-sizing: border-box
+
+  a
+    transition-duration: .3s
+    color: $black
+    display: inline-block
+
+    &:focus, &:hover
+      transition-duration: .3s
+      //color: $Light-gray
+
+.classy-navbar .nav-brand
+  font-size: 26px
+  font-weight: 500
+  h1
+    position: fixed
+    left: -20000px
+
+.classy-nav-container
+  &.classy-sticky
+    position: fixed
+    z-index: 1010
+    width: 100%
+    top: 0
+    right: 0
+    left: 0
+
+  &.box-skins .classynav > ul > li > a
+    color: $White
+
+.justify-content-between
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+
+.justify-content-center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+
+.breakpoint-off .classynav
+  -webkit-box-align: center
+  -ms-grid-row-align: center
+
+.classy-navbar
+  -webkit-box-align: center
+  -ms-grid-row-align: center
+  width: 100%
+  height: 76px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-align: center
+  align-items: center
+  padding: 0px 10%
+  position: relative
+  background: #FFF
+  justify-content: space-between
+
+  .nav-brand
+    color: #565656
+    display: inline-block
+    img
+      width: 320px
+      max-width: 100%
+.classynav ul.shopp
+  padding-left: 20px
+  li
+    a
+      color: #000
+      padding: 6px 8px
+      &:focus, &:hover
+        border-bottom: 0px solid #dccfcf00
+        //color: #4a4a4a
+.classynav ul li.nav-links a     
+  background: $Sup-color
+  color: #FFF
+.classynav ul li
+  display: inline-block
+  clear: both
+  position: inherit
+  z-index: 10
+
+  &.cn-dropdown-item
+    position: relative
+    z-index: 10
+
+    ul li
+      position: relative
+      z-index: 10
+
+  ul li
+    display: block
+
+    a
+      padding: 0 20px
+
+  a
+    padding: 6px 18px
+    display: flex
+    font-size: 18px
+    color: #000
+    text-align: center
+    position: relative
+    align-items: center
+    height: 76px
+    &::before
+      position: absolute
+      content: ""
+      width: 20%
+      height: 4px
+      background: rgba(92, 1, 196, 0)
+      left: 40%
+      bottom: 0px
+      +hover-transition
+    &:focus, &:hover
+      &::before        
+        width: 70%
+        left: 15%
+        background: #000
+        +hover-transition
+
+
+  .megamenu li a
+    padding: 0 12px
+
+  div.single-mega a
+    height: auto
+    line-height: 1
+
+.icon-classy-nav-down-arrow
+  font-family: 'fontello'
+  speak: none
+  font-style: normal
+  font-weight: 400
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before
+    content: ""
+.classynav ul li.has-down > a:hover::after, .classynav ul li.megamenu-item > a:hover::after
+  color: $Main-color
+.classynav ul li
+  &.has-down > a:after, &.megamenu-item > a:after
+    font-family: 'fontello'
+    content: "\e806"
+    font-size: 15px
+    color: $black
+    padding-left: 5px
+    -webkit-transition-duration: .5s
+    transition-duration: 0.5s
+
+  ul li.has-down > a::after
+    -webkit-transform: rotate(-90deg)
+    transform: rotate(-90deg)
+    position: absolute
+    top: 0
+    right: 10px
+    z-index: 3
+
+.classy-btn
+  position: relative
+  z-index: 1
+  min-width: 120px
+  padding: 0 25px
+  line-height: 42px
+  height: 42px
+  border-radius: 50px
+  color: $White !important
+  margin-left: 30px
+  text-align: center
+
+.classycloseIcon, .dd-trigger
+  position: absolute
+  display: none
+
+.classy-btn
+  &:focus, &:hover
+    box-shadow: 0 0 10px $black
+
+.dd-trigger
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background-color: transparent
+  cursor: pointer
+  z-index: 500
+  border-radius: 0
+
+.classycloseIcon
+  top: 20px
+  right: 20px
+  z-index: 12
+
+  .cross-wrap
+    width: 26px
+    height: 26px
+    cursor: pointer
+    position: relative
+
+    span
+      position: absolute
+      display: block
+      width: 100%
+      height: 2px
+      border-radius: 6px
+      background: $black
+
+      &.top
+        top: 12px
+        left: 0
+        -webkit-transform: rotate(45deg)
+        transform: rotate(45deg)
+
+      &.bottom
+        bottom: 12px
+        left: 0
+        -webkit-transform: rotate(-45deg)
+        transform: rotate(-45deg)
+
+.classy-navbar-toggler
+  border: none
+  background-color: transparent
+  cursor: pointer
+  display: none
+
+  .navbarToggler
+    display: inline-block
+    cursor: pointer
+    margin-bottom: 5px
+
+    span
+      position: relative
+      background-color: #000
+      border-radius: 3px
+      display: block
+      height: 3px
+      margin-top: 5px
+      padding: 0
+      -webkit-transition-duration: .3s
+      transition-duration: .3s
+      width: 30px
+      cursor: pointer
+
+    &.active span
+      &:nth-of-type(1)
+        -webkit-transform: rotate3d(0, 0, 1, 45deg)
+        transform: rotate3d(0, 0, 1, 45deg)
+        top: 8px
+
+      &:nth-of-type(2)
+        opacity: 0
+
+      &:nth-of-type(3)
+        -webkit-transform: rotate3d(0, 0, 1, -45deg)
+        transform: rotate3d(0, 0, 1, -45deg)
+        top: -8px
+
+.classynav ul li .dropdown li a
+  padding: 8px 0px
+.classynav ul li
+  .megamenu
+    position: absolute
+    width: 100%
+    left: 0
+    top: 100%
+    background-color: $White
+    z-index: 200
+    box-shadow: 0 1px 4px $black
+
+    .single-mega
+      &.cn-col-5
+        width: 20%
+        float: left
+        padding: 15px
+        border-right: 1px solid $White
+
+        &:last-of-type
+          border-right: none
+
+      &.cn-col-4
+        width: 25%
+        float: left
+        padding: 15px
+        border-right: 1px solid $White
+
+        &:last-of-type
+          border-right: none
+
+      &.cn-col-3
+        width: 33.3333334%
+        float: left
+        padding: 15px
+        border-right: 1px solid $White
+
+        &:last-of-type
+          border-right: none
+
+      .title
+        font-size: 14px
+        border-bottom: 1px solid $White
+        padding: 8px 12px
+
+  .dropdown li
+    &:hover
+      a
+        color: $Main-color
+    a
+      border-bottom: 1px solid $Lights-gray
+      color: $Dark-gray
+      font-size: 16px
+      font-weight: 400
+
+        
+
+    &:last-child a
+      border-bottom: none
+
+    .dropdown li
+      a
+        border-bottom: 1px solid $Lights-gray
+
+      &:last-child a
+        border-bottom: none
+
+      .dropdown li
+        a
+          border-bottom: 1px solid $Lights-gray
+
+        &:last-child a
+          border-bottom: none
+
+        .dropdown li
+          a
+            border-bottom: 1px solid $Lights-gray
+
+          &:last-child a
+            border-bottom: none
+
+          .dropdown li
+            a
+              border-bottom: 1px solid $Lights-gray
+
+            &:last-child a
+              border-bottom: none
+
+            .dropdown li
+              a
+                border-bottom: 1px solid $Lights-gray
+
+              &:last-child a
+                border-bottom: none
+
+              .dropdown li
+                a
+                  border-bottom: 1px solid $Lights-gray
+
+                &:last-child a
+                  border-bottom: none
+
+                .dropdown li
+                  a
+                    border-bottom: 1px solid $Lights-gray
+
+                  &:last-child a
+                    border-bottom: none
+
+.breakpoint-off .classynav
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-align: center
+  align-items: center
+
+  ul li
+    .dropdown
+      width: 180px
+      position: absolute
+      background-color: $White
+      top: 120%
+      left: calc( 50% - 90px )
+      z-index: 100
+      height: auto
+      box-shadow: 0 1px 5px #707070
+      -webkit-transition-duration: .3s
+      transition-duration: .3s
+      opacity: 0
+      visibility: hidden
+
+      li .dropdown
+        top: 10px
+        margin-top: 10px
+        left: 180px
+        z-index: 200
+        opacity: 0
+        visibility: hidden
+
+        li .dropdown
+          opacity: 0
+          visibility: hidden
+          top: 120%
+
+          li .dropdown
+            opacity: 0
+            visibility: hidden
+            top: 120%
+
+            li .dropdown
+              opacity: 0
+              visibility: hidden
+              top: 120%
+
+              li .dropdown
+                opacity: 0
+                visibility: hidden
+                top: 120%
+
+                li .dropdown
+                  opacity: 0
+                  visibility: hidden
+                  top: 120%
+
+                  li .dropdown
+                    opacity: 0
+                    visibility: hidden
+                    top: 120%
+
+                    li .dropdown
+                      opacity: 0
+                      visibility: hidden
+                      top: 120%
+
+                      li .dropdown
+                        opacity: 0
+                        visibility: hidden
+                        top: 120%
+
+    &:hover .dropdown
+      opacity: 1
+      visibility: visible
+      top: 100%
+
+    .dropdown li
+      .dropdown li
+        .dropdown li
+          .dropdown li
+            .dropdown li
+              .dropdown li
+                .dropdown li
+                  .dropdown li
+                    .dropdown li:hover .dropdown, &:hover .dropdown
+                      opacity: 1
+                      visibility: visible
+                      top: -10px
+
+                  &:hover .dropdown
+                    opacity: 1
+                    visibility: visible
+                    top: -10px
+
+                &:hover .dropdown
+                  opacity: 1
+                  visibility: visible
+                  top: -10px
+
+              &:hover .dropdown
+                opacity: 1
+                visibility: visible
+                top: -10px
+
+            &:hover .dropdown
+              opacity: 1
+              visibility: visible
+              top: -10px
+
+          &:hover .dropdown
+            opacity: 1
+            visibility: visible
+            top: -10px
+
+        &:hover .dropdown
+          opacity: 1
+          visibility: visible
+          top: -10px
+
+      &:hover .dropdown
+        opacity: 1
+        visibility: visible
+        top: -10px
+
+    .megamenu
+      opacity: 0
+      visibility: hidden
+      position: absolute
+      width: 100%
+      left: 0
+      top: 120%
+      background-color: $White
+      z-index: 200
+      box-shadow: 0 1px 4px $black
+      -webkit-transition-duration: .3s
+      transition-duration: 0.3s
+
+    &.megamenu-item
+      &:focus .megamenu, &:hover .megamenu
+        top: 100%
+        visibility: visible
+        opacity: 1
+
+.breakpoint-on
+  .classy-navbar-toggler, .classycloseIcon
+    display: block
+
+  .classy-navbar .classy-menu
+    background-color: $White
+    position: fixed
+    top: 0
+    left: -310px
+    z-index: 1000
+    width: 300px
+    height: 100%
+    -webkit-transition-duration: .5s
+    transition-duration: .5s
+    padding: 0
+    box-shadow: 0 5px 20px$black
+    display: block
+    overflow-x: hidden
+    overflow-y: scroll
+
+  .classynav ul li
+    .dropdown, .megamenu
+      position: relative
+      left: 0
+      box-shadow: none
+      width: 100%
+      top: 0
+
+  .classy-navbar .classy-menu.menu-on
+    left: 0
+
+  .classynav ul li
+    display: block
+    position: relative
+    clear: both
+    z-index: 10
+
+    a
+      padding: 0 10px
+      height: 50px
+      line-height: 50px
+      display: flex
+      justify-content: center
+    .dropdown li .dropdown
+      width: 100%
+      position: relative
+      top: 0
+      left: 0
+
+    &.megamenu-item
+      position: relative
+      z-index: 10
+
+  .dd-trigger
+    height: 38px
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: block
+
+  .classynav
+    ul li
+      .dropdown
+        display: none
+
+      .megamenu
+        display: none
+        z-index: 200
+
+        .single-mega
+          &.cn-col-3, &.cn-col-4, &.cn-col-5
+            width: 100%
+            border-right: none
+            border-bottom: 1px solid $White
+
+    padding-top: 70px
+
+    > ul > li > a
+      // background-color: $White
+      border-bottom: 1px solid $Light-gray
+
+.dark
+  .classynav ul li
+    .dropdown, .megamenu
+      background-color: $Sup-color
+
+  &.classy-nav-container
+    background-color: $Sup-color
+
+.breakpoint-on
+  .classynav ul li ul.dropdown li ul li
+    margin-left: 15px
+
+  .classy-btn
+    width: calc(100% - 30px)
+    margin: 30px 15px
+
+  .classynav ul li
+    &.has-down > a::after, &.megamenu-item > a::after
+      position: absolute
+      top: 0
+      right: 20px
+      z-index: 5
+
+    &.has-down.active > a:after, &.megamenu-item.active > a:after
+      color: $Main-color
+
+.dark
+  &.classy-nav-container a
+    color: rgba(255, 255, 255, 0.7)
+
+  .classynav ul li.megamenu-item > a:after
+    color: $White
+
+  &.classy-nav-container a
+    &:focus, &:hover
+      color: $White
+
+  .classynav ul li
+    .megamenu .single-mega
+      &.cn-col-3, &.cn-col-4, &.cn-col-5
+        border-right: 1px solid $Light-gray
+
+    &.megamenu-item ul li a
+      border-bottom: none
+
+    .megamenu .single-mega .title
+      color: $White
+      border-bottom: 1px solid $Light-gray
+
+  .classy-navbar-toggler .navbarToggler span
+    background-color: $White
+
+  &.breakpoint-on .classy-navbar .classy-menu
+    background-color: $Sup-color
+
+  .classycloseIcon .cross-wrap span
+    background-color: $White
+
+  &.breakpoint-on .classynav
+    > ul > li > a
+      background-color: $Sup-color
+      border-bottom: 1px solid $Light-gray
+
+    ul li .megamenu .single-mega
+      &.cn-col-3, &.cn-col-4, &.cn-col-5
+        border-bottom: 1px solid $Light-gray
+        border-right: none
+
+  .classynav ul li .dropdown li
+    a
+      border-bottom: 1px solid $Light-gray
+
+    &:last-child a
+      border-bottom: none
+
+    .dropdown li
+      a
+        border-bottom: 1px solid $Light-gray
+
+      &:last-child a
+        border-bottom: none
+
+      .dropdown li
+        a
+          border-bottom: 1px solid $Light-gray
+
+        &:last-child a
+          border-bottom: none
+
+        .dropdown li
+          a
+            border-bottom: 1px solid $Light-gray
+
+          &:last-child a
+            border-bottom: none
+
+          .dropdown li
+            a
+              border-bottom: 1px solid $Light-gray
+
+            &:last-child a
+              border-bottom: none
+
+            .dropdown li
+              a
+                border-bottom: 1px solid $Light-gray
+
+              &:last-child a
+                border-bottom: none
+
+              .dropdown li
+                a
+                  border-bottom: 1px solid $Light-gray
+
+                &:last-child a
+                  border-bottom: none
+
+                .dropdown li
+                  a
+                    border-bottom: 1px solid $Light-gray
+
+                  &:last-child a
+                    border-bottom: none
+
+.right.breakpoint-on .classy-navbar .classy-menu
+  left: auto
+  right: -310px
+
+.dropdown-rtl.breakpoint-off .classynav ul li .dropdown, .right.breakpoint-on .classy-navbar .classy-menu.menu-on
+  left: auto
+  right: 0
+
+.dropdown-rtl
+  .classynav ul li
+    .megamenu .single-mega .title, a
+      text-align: right
+
+  &.breakpoint-off .classynav ul li
+    .dropdown li .dropdown
+      right: 180px
+      left: auto
+      opacity: 0
+      visibility: hidden
+      top: 10px
+
+      li .dropdown
+        right: 180px
+        left: auto
+        opacity: 0
+        visibility: hidden
+        top: 10px
+
+        li .dropdown
+          right: 180px
+          left: auto
+          opacity: 0
+          visibility: hidden
+          top: 10px
+
+          li .dropdown
+            right: 180px
+            left: auto
+            opacity: 0
+            visibility: hidden
+            top: 10px
+
+            li .dropdown
+              right: 180px
+              left: auto
+              opacity: 0
+              visibility: hidden
+              top: 10px
+
+              li .dropdown
+                right: 180px
+                left: auto
+                opacity: 0
+                visibility: hidden
+                top: 10px
+
+                li .dropdown
+                  right: 180px
+                  left: auto
+                  opacity: 0
+                  visibility: hidden
+                  top: 10px
+
+                  li .dropdown
+                    right: 180px
+                    left: auto
+                    opacity: 0
+                    visibility: hidden
+                    top: 10px
+
+                    li .dropdown
+                      right: 180px
+                      left: auto
+                      opacity: 0
+                      visibility: hidden
+                      top: 10px
+
+    &:hover .dropdown
+      opacity: 1
+      visibility: visible
+      top: 90%
+
+    .dropdown li
+      .dropdown li
+        .dropdown li
+          .dropdown li
+            .dropdown li
+              .dropdown li
+                .dropdown li
+                  .dropdown li
+                    .dropdown li:hover .dropdown, &:hover .dropdown
+                      opacity: 1
+                      visibility: visible
+                      top: 0
+
+                  &:hover .dropdown
+                    opacity: 1
+                    visibility: visible
+                    top: 0
+
+                &:hover .dropdown
+                  opacity: 1
+                  visibility: visible
+                  top: 0
+
+              &:hover .dropdown
+                opacity: 1
+                visibility: visible
+                top: 0
+
+            &:hover .dropdown
+              opacity: 1
+              visibility: visible
+              top: 0
+
+          &:hover .dropdown
+            opacity: 1
+            visibility: visible
+            top: 0
+
+        &:hover .dropdown
+          opacity: 1
+          visibility: visible
+          top: 0
+
+      &:hover .dropdown
+        opacity: 1
+        visibility: visible
+        top: 0
+
+  &.breakpoint-on .classynav ul li ul.dropdown li ul li
+    margin-left: 0
+    margin-right: 15px
+
+@media screen and (max-width: 1680px)
+  .classynav ul li a
+    padding: 0 14px
+@media screen and (max-width: 1440px)
+  .classynav ul li a
+    font-size: 17px
+    padding: 0 12px
+  .classy-navbar
+    padding: 0px 6%  
+  .classynav ul.langbox
+    margin-left: 20px
+@media screen and (max-width: 1200px)
+  .search-wrap
+    display: none
+    &.show
+      display: block
+      position: fixed
+      top: 80px
+      right: 12%
+  .classy-navbar
+    padding: 0px 2%  
+  .classynav ul.langbox 
+    padding: 3px 10px 3px 6px
+    li a
+      font-size: 14px
+    .lang-line::before
+      font-size: 13px
+      bottom: 2px
+  .classynav ul li a    
+    padding: 0 8px
+  .classy-navbar .nav-brand img 
+    max-width: 220px
+
+@media screen and (max-width: 991px) 
+  .classynav ul li.nav-links a::before
+    background: #ffffff00
+  .search-wrap .search-box .sb-inner form 
+    .sbi-submit
+      top: -15px
+    .sbi-input input
+      height: 20px
+      padding: 0px 10px
+      font-size: 18px
+    .sbi-input .sbi-icon 
+      top: 0px
+      line-height: 20px
+      font-size: 20px
+
+  .search-wrap
+    &.show
+      top: 300px
+      right: 0
+      z-index: 100
+      width: 100%
+  .search-wrap .search-box 
+    padding: 16px 30px 
+  .classynav ul li .dropdown li a 
+    font-size: 16px
+    font-weight: 400
+    line-height: 20px
+    height: auto
+    background: $Lights-grays
+  .classynav ul.langbox .lang-line::before
+    bottom: 5px
+    right: -5px     
+  .classynav 
+    ul.langbox li
+      margin: 0 4px
+      a
+        border-bottom: none
+        line-height: 20px
+        height: 20px
+    ul.langbox
+      width: fit-content
+      margin: 30px auto
+      display: flex
+      justify-content: center
+      align-content: center
+      .globe
+        margin-left: 0px
+        line-height: 20px
+        height: 20px
+  .icon-box
+    margin: 10px auto
+    justify-content: center
+    display: flex
+    width: fit-content
+    width: 120px
+  .breakpoint-on .classy-navbar .classy-menu.menu-on
+    width: 100%
+  .classynav ul li.nav-links, .classynav ul li:hover 
+    background: $White
+    padding: 0  
+  .classynav ul.shopp
+    padding-left: 0
+  .classy-navbar
+    height: 65px
+  .classy-navbar 
+    padding: 0px 4% 
+@media screen and (max-width: 667px)
+  .breakpoint-on .classy-navbar .classy-menu
+    width: 100%
+    left: -800px
+@media screen and (max-width: 575px)   
+  .search-wrap .search-box
+    padding: 16px 10px
+    .sb-inner 
+      padding: 0px 101px 0px 0px
+    .sb-inner form .sbi-submit 
+      right: 40px
+      button
+        width: 70px
+        font-size: 18px
+        padding: 10px 6px
+  .search-wrap .search-box .sb-inner form .sbi-input
+    padding: 0px 0px 0px 40px
+
+@media screen and (max-width: 400px)
+  .classy-navbar .nav-bg
+    padding: 5px
+    padding-right: 3%
+@media screen and (max-width: 360px)
+  .classy-navbar .nav-brand
+    max-width: 220px  

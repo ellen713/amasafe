@@ -1,0 +1,241 @@
+@import 'tool';
+
+//order 表格其他設定
+.order-center
+  tr
+    td
+      text-align: center      
+// RWD 表格
+.rwd-table
+  width: 100%
+  margin-top: 5px
+  tr
+    border-top: 1px solid #ddd
+    border-bottom: 1px solid #ddd
+
+  th
+    display: none
+
+  td
+    display: block
+    &:before
+      content: attr(data-th) ""
+      font-weight: bold
+      color: #FFF
+      width: 126px
+      margin-right: 10px
+      display: inline-block
+      background: #979797
+      text-align: center
+      padding: 4px 0px
+
+  th, td
+    text-align: left
+/* ------------------
+/* ----- Design -----
+/* ------------------
+.rwd-table
+  color: White
+  overflow: hidden
+
+  th, td
+    margin: .5em 1em
+
+  th
+    color: $White
+
+  thead th
+    background: $Light-gray
+  tbody tr
+    background: $White
+    td
+      color: $black
+      a
+        border-bottom: solid 1px
+      button
+        border: solid 1px $black
+        &:hover
+          background: $black
+          color: $White
+
+
+// RWD 表格 訂單明細
+.rwd-table.rwd-table-order2
+  border: solid 1px $Light-gray
+  line-height: 20px
+  thead
+    background: $Light-gray
+  tr
+    border: none
+  tbody tr
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    border-bottom: solid 1px $Lights-grays
+    .rwd-table-order2-img
+      img
+        height: 100px
+        margin: 0px 10px
+        width: auto
+  tbody tr:last-child  
+    border-bottom: solid 0px $Lights-grays 
+
+  //寬度設定      
+  .w5
+    width: 5%
+  .w10
+    width: 10%
+  .w15
+    width: 15%  
+  .w20
+    width: 20%
+  .w25
+    width: 25%  
+  .w30
+    width: 30% 
+  .w35
+    width: 35%         
+  .w40
+    width: 40%
+  .w45
+    width: 45%   
+  .w50
+    width: 50%
+  .w55
+    width: 55%    
+  .w60
+    width: 60%
+  .w65
+    width: 65%
+  .w70
+    width: 70%
+  .w75
+    width: 75%
+  .w80
+    width: 80%
+  .w85
+    width: 85%  
+  .w90
+    width: 90%
+  .w95
+    width: 95%      
+
+.rwd-table.rwd-table-order2 tr
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+.rwd-table-order2 tbody tr:nth-child(even) 
+  background: #ECF3DF
+
+
+
+            
+@media screen and (max-width: 667px)
+  //order 表格其他設定
+  .order-center
+    tr
+      td
+        text-align: left !important
+  .tabs
+  //  display: none
+
+  .tab_drawer_heading
+    background-color: #ccc
+    color: #fff
+    border-top: 1px solid #333
+    margin: 0
+    padding: 5px 20px
+    display: block
+    cursor: pointer
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+  .d_active
+    background-color: #666
+    color: #fff 
+
+
+
+@media screen and (max-width: 991px)
+  //RWD 表格
+  .rwd-table.rwd-table-order2 .edit
+    display: block
+    a
+      display: inline-block
+  
+  .rwd-table td:before
+    margin-bottom: 6px  
+  .rwd-table.rwd-table-order2 tbody tr .rwd-table-order2-img
+    display: inline-block
+    img
+      height: 60px
+      margin: 0
+    
+  .rwd-table.rwd-table-order2
+    .w5
+      width: 100%
+    .w10
+      width: 100%
+    .w15
+      width: 100% 
+    .w20
+      width: 100%
+    .w25
+      width: 100% 
+    .w30
+      width: 100% 
+    .w35
+      width: 100%        
+    .w40
+      width: 100%
+    .w45
+      width: 100%  
+    .w50
+      width: 100%
+    .w55
+      width: 100%   
+    .w60
+      width: 100%
+    .w65
+      width: 100%
+    .w70
+      width: 100%
+    .w75
+      width: 100%
+    .w80
+      width: 100%
+    .w85
+      width: 100%
+    .w90
+      width: 100%
+    .w95
+      width: 100%  
+
+
+@media (min-width: 992px)
+  //RWD 表格
+  .rwd-table td:before
+    display: none
+  .rwd-table
+    thead th
+      text-align: center
+    th, td
+      display: table-cell
+      padding: 12px 4px !important
+      text-align: center
+  //RWD 表格
+  .rwd-table.rwd-table-order2
+    th, td
+      display: table-cell
+      padding: 12px 4px !important
+      margin: 0
+@media screen and (max-width: 450px)
+  //RWD 表格
+  .rwd-table td:before
+    width: 100%
+  .rwd-table td
+    text-align: center

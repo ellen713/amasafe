@@ -1,0 +1,1466 @@
+@import 'tool'
+
+hr.gray
+  background: $Lights-grays
+section.page
+  position: relative
+  z-index: 1
+.container-100
+  width: 100%
+  overflow: hidden
+
+// 共用樣式-按鈕
+.btn_more, .btn_more_w, .btn_back
+  position: relative
+  background-color: transparent
+  display: flex
+  align-items: center
+  padding: 0
+  p
+    font-size: 16px
+    z-index: 2
+    margin-right: 20px
+    +hover-transition
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 30px
+      height: 30px
+      +hover-transition
+  &:hover
+    p
+      color: $Main-color
+.btn_more 
+  p
+    color: #000
+    &::before
+      right: -20%
+      background: url(../img/btn_right.svg) center center  /  contain no-repeat
+.btn_more_w 
+  p
+    color: #FFF
+    &::before
+      right: -20%
+      background: url(../img/btn_right_w.svg) center center  /  contain no-repeat
+.btn_more, .btn_more_w
+  &:hover
+    p
+      &::before
+        right: -40%
+        background: url(../img/btn_right_hover.svg) center center  /  contain no-repeat
+.btn_back
+  p
+    color: #000
+    &::before
+      left: -60%
+      background: url(../img/btn_left.svg) center center  /  contain no-repeat
+  &:hover
+    p
+      &::before
+        left: -80%
+        background: url(../img/btn_left_hover.svg) center center  /  contain no-repeat
+//產品詳情-按鈕
+.btnbox
+  background: #fff
+  border-radius: 10px
+  text-align: center
+  +hover-transition
+  button
+    background: transparent
+    padding: 20px 60px
+  p
+    font-weight: 600
+    color: #000
+
+.btn_reset 
+  background: $Lights-gray !important
+  border: solid 1px $Lights-gray !important
+  color: #FFF !important
+  &:hover
+    background: $Light-gray !important
+    border: solid 1px $Light-gray !important
+.btn_submit
+  background: $Dark-gray !important
+  border: solid 1px $Dark-gray !important
+  color: #FFF !important
+  &:hover
+    background: #000 !important
+    border: solid 1px #000 !important
+
+.l-h
+  line-height: 26px  
+  color: $Main-color
+// 共用顏色
+.color01
+  color: $Main-color
+.color02
+  color: $Sup-color
+.color03
+  color: $Light-gray
+.color_gray
+  color: $Dark-gray
+.color_w
+  color: #FFF !important
+.color_b
+  color: #000
+.color_p
+  color: $Secondary-coloring
+// 共用高度
+.top-alla
+  padding: 5% 0
+.top-allb
+  padding: 5% 0 8% 0
+  
+// div樣式
+.box
+  box-shadow: 0px 3px 20px #00000024  
+  background: #FFF 
+     
+// 共用背景
+.bg
+  background-color: #FAFAFA
+.bg01
+  background-color: $Main-color
+.bg02
+  position: relative
+  background: url(../img/bg02.jpg)center center / cover no-repeat 
+.bg_page
+  background: linear-gradient(41.39deg, rgba(210, 211, 215, 0.5) 13.84%, rgba(210, 211, 215, 0.1) 82.58%)
+.bg_contact
+  background: #EFEFEF
+
+.swiper-products
+  // margin: 0 40px  //沒有輪播箭頭  不用包起來
+  overflow: hidden
+  padding-bottom: 60px
+
+
+a.producta
+  +hover-transition
+  .product
+    &:hover
+      .btnbox
+        background: $Main-color
+        p
+          color: #FFF
+    
+.product
+  position: relative
+  +hover-transition
+  &:hover
+    .imgbox
+      &::after
+        background: linear-gradient(to top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 20%)
+      img
+        transform: translate(-50%, -50%) scale(1.1)
+    .textbox
+      h4
+        color: $Main-color
+  .imgbox
+    +imgbox
+    padding-bottom: 100%
+    background: #FFF
+    border-radius: 10px
+    margin: 0 auto
+    &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(to top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 60%)
+    img
+      +imgbox2
+      width: 80%
+      +hover-transition
+
+a.productb
+  .product02
+    background: linear-gradient(to top, rgba(0,0,0,0.1) 0%, rgba(255,255,255,1) 100%)
+    padding: 2% 10%
+    margin-bottom: 40px
+    +hover-transition
+    &:hover
+      background: linear-gradient(to top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 100%)
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1)
+      border-radius: 20px
+      h2
+        color: $Main-color
+      .imgbox img
+        width: 88%
+      .btnbox
+        background: $Main-color
+        p
+          color: #FFF
+    h2
+      font-size: 25px
+      margin: 20px auto
+      +hover-transition
+    p
+      font-weight: 600
+      line-height: 1.5
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      overflow: hidden
+      -webkit-line-clamp: 2
+  .imgbox
+    +imgbox
+    padding-bottom: 100%
+    margin: 0 auto
+    img
+      +imgbox2
+      width: 85%
+      +hover-transition
+
+//產品內頁 推薦商品
+.recommend
+  background: #eee
+  border-radius: 20px
+  padding: 30px 0
+.swiper-products03
+  margin: 0 40px  //沒有輪播箭頭  不用包起來
+  overflow: hidden
+  .imgbox img
+    width: 60% !important
+  .swiper-button-next
+    right: 0 !important
+    color: #000 !important
+  .swiper-button-prev
+    left: 0 !important
+    color: #000 !important
+.product-page
+
+
+// 麵包屑
+dl.Breadcrumb
+  margin: 20px auto
+dl.Breadcrumb dd
+  color: $Main-color
+  font-weight: 900
+  float: left
+  margin-bottom: 5px
+dl.Breadcrumb dd a
+  color: $Dark-gray
+  font-weight: 400
+  &::after
+    content: " > "
+    padding: 0 5px
+//產品內頁 規格
+.pd
+  display: flex
+  flex-direction: column
+  .tag
+    margin-bottom: 5px
+  .tag span
+    font-size: 14px
+    padding: 2px 6px
+    background: $Main-color
+    color: #FFF
+  .norem p
+    font-size: 20px
+  .norm
+    width: 100%
+    .name
+      width: 62px
+    .des
+      width: calc( 100% - 62px )
+  .locate
+    justify-content: space-between
+    position: relative
+    width: 50%
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 50%
+      height: 6px
+      background: url(../img/locate.png)center center/ contain no-repeat
+  .pay01
+    background: #EEE
+    padding: 10px 20px
+    text-align: center
+    margin-right: 20px
+    span, p
+      font-size: 16px
+      line-height: 1.5
+  .paint01, .form01
+    background: #EEE
+    padding: 5px 10px
+    text-align: center
+    margin-right: 20px
+    margin-bottom: 10px
+.btn_fb
+  display: inline-flex
+  align-items: center
+  position: relative
+  background: $Dark-gray
+  border-radius: 50px
+  padding: 5px 20px 5px 10px
+  p
+    color: #FFF
+  &:hover
+    background: $Main-color
+    .imgbox
+      &::after
+        width: 200px
+  .imgbox
+    margin-right: 10px
+    position: relative
+    img
+      width: 50px
+      height: 50px
+      z-index: 2
+      position: relative
+
+
+//首頁最新消息
+.index-news
+  display: flex
+  align-items: center
+  color: #FFF
+  padding: 20px 15px
+  img
+    width: 30px
+    margin-right: 20px
+  h4
+    line-height: 1.2
+        
+//首頁關於我們
+.index-about
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  z-index: 2
+  .desbox
+    padding-right: 60px
+    padding-left: 0
+  .imgbox
+    +imgbox
+    cursor: auto
+    border-radius: 20px
+    padding-bottom: 40%
+    img
+      +imgbox2
+.index-feature
+  margin-top: 40px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  .featurebox
+    display: flex
+    align-items: center
+    background: $black
+    color: #fff
+    padding: 12px 40px
+    border-radius: 10px
+    img
+      margin-right: 10px
+
+//首頁暢銷產品 門市位置
+.index-seller, .index-store
+  .swiper-pagination
+    .swiper-pagination-bullet
+      width: 12px
+      height: 12px
+      background: transparent
+      border: solid 1px $black
+      opacity: 1
+    .swiper-pagination-bullet-active
+      background: $black
+      border: solid 2px $black
+
+//首頁產品介紹
+.block02
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  .block-left,.block-right
+    .imgbox
+      +imgbox
+      +hover-transition
+      border-radius: 20px
+      background: #FFF
+      &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%)
+      img
+        +imgbox2
+    .infobox
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      font-size: 24px
+      z-index: 2
+      color: #fff
+      font-weight: 600
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      align-items: center
+      text-align: center
+      width: 90%
+      opacity: 0
+      +hover-transition
+  .block-left
+    position: relative
+    padding: 10px
+    width: 50%
+    &:hover
+      .imgbox
+        &::after
+          background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%)
+        img
+          transform: translate(-50%, -50%) scale(1.1)
+      .infobox
+        opacity: 1
+      .btnbox
+        background: $Main-color
+        p
+          color: #FFF
+    .imgbox
+      padding-bottom: 112%
+  .block-right
+    width: 50%
+    display: flex
+    flex-wrap: wrap
+    .block-bottom
+      position: relative
+      padding: 10px
+      width: 100%
+      &:nth-child(1), &:nth-child(2)
+        &:hover
+          .imgbox
+            &::after
+              background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%)
+            img
+              transform: translate(-50%, -50%) scale(1.1)
+          .infobox
+            opacity: 1
+          .btnbox
+            background: $Main-color
+            p
+              color: #FFF
+      .imgbox
+        padding-bottom: calc( 56% - 10px )
+        img
+          width: 50%
+      .infobox
+        opacity: 0
+        +hover-transition
+
+//首頁常見問題
+.index-qa
+  .imgbox
+    width: 100%
+    overflow: hidden
+    margin: 0 auto
+    display: flex
+    justify-content: center
+    img
+      width: 100%
+
+//首頁聯絡我們
+.index-contact
+  position: relative
+  .imgbox
+    +imgbox
+    cursor: auto
+    border-radius: 20px
+    padding-bottom: 37%
+    img
+      +imgbox2
+  .textbox
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 80%
+    display: flex
+    justify-content: center
+    text-align: center
+    h3
+      letter-spacing: 2px
+      line-height: 1.5
+    h5
+      font-weight: 400
+      line-height: 1.5
+      margin: 20px auto 30px
+      width: 60%
+  .btnbox
+    display: inline-block
+    +hover-transition
+    button
+      padding: 20px 90px
+    &:hover
+      background: $Main-color
+      p
+        color: #FFF
+
+//首頁門市位置
+.swiper-store
+  overflow: hidden
+  padding-bottom: 60px
+.store, .store02
+  background: $Dark-gray
+  border-radius: 20px
+  overflow: hidden
+  +hover-transition
+  .textbox
+    padding: 40px
+    color: #FFF
+    p
+      align-items: center
+      display: flex
+    i
+      color: #000
+      background: #FFF
+      border-radius: 50px
+      width: 20px
+      height: 20px
+      display: inline-block
+      &::before
+        font-size: 14px
+        top: -3px
+        position: relative
+  .maps
+    border-radius: 20px 20px 0 0
+    padding-bottom: 80%
+  &:hover
+    background: $Sup-color
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1)
+    h4
+      color: $Main-color
+
+//分頁問答總覽
+.guidebook
+  margin-bottom: 40px
+  background: #FFF
+  border-radius: 20px
+.guest, .official
+  display: flex
+  justify-content: space-between
+  width: 100%
+  padding: 15px 20px
+  border-radius: 20px
+  .imgbox
+    width: 100px
+    height: 100px
+    border-radius: 20px
+    overflow: hidden
+    img
+      width: 100%
+  .textbox
+    width: calc( 100% - 100px )
+    padding-left: 20px
+  .namebox
+    display: flex
+    align-items: center
+    p
+      font-weight: 600
+      color: #333
+    span
+      color: #aaa
+.guest
+.official
+  background: #ececec
+
+//分頁門市位置
+.store02
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  .maps
+    padding-bottom: 25%
+
+//門市位置內頁
+.store-info
+  display: flex
+  flex-wrap: wrap
+  .page_title
+    h2
+      border-bottom: 1px solid #aaa
+  i
+    width: 20px
+    height: 20px
+    background: #000
+    border-radius: 50px
+    color: #FFF
+    display: inline-block
+    line-height: 1
+    margin-right: 10px
+    &::before
+      font-size: 13px
+      position: relative
+      left: 1px
+      top: 1px
+  .imgbox
+    +imgbox
+    cursor: auto
+    padding-bottom: 60%
+    border-radius: 20px
+    img
+      +imgbox2
+  
+//多圖上傳        
+.morepic
+  a
+    +imgbox
+    padding-bottom: 90%
+  img
+    +imgbox2
+    height: 100%
+
+//分頁聯絡我們
+.contact
+  padding: 20px
+  position: relative
+  &::after
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: #fff
+    width: 100%
+    height: 100%
+    z-index: -1
+  .info-box
+    background: #f1f1f1
+    padding: 50px 20px
+  p
+    display: flex
+    &:hover
+      a
+        color: $Main-color
+  i
+    width: 35px
+    &::before
+      width: 25px
+      height: 25px
+      line-height: 2
+      border-radius: 50px
+      border: 1px solid #000
+      font-size: 12px
+      margin-right: 5px
+  span
+    width: calc( 100% - 35px )
+    word-break: break-all
+  .imgboxc
+    +imgbox
+    padding-bottom: 50%
+    cursor: auto
+    img
+      +imgbox2
+
+.banner-all img
+  width: 100%
+/*BANNER
+.banner
+  margin: 0
+  padding: 0
+  .swiper-banner
+    width: 100%
+    .swiper-slide
+      +imgbox
+      padding-bottom: 40%
+      a
+        img
+          +imgbox2
+    .swiper-button-next, .swiper-button-prev
+      color: $White
+    .swiper-pagination
+      .swiper-pagination-bullet
+        width: 15px
+        height: 15px
+        background: transparent
+        border: solid 2px $Lights-gray
+      .swiper-pagination-bullet-active
+        border: solid 2px $White
+.pc
+  display: inline-block !important
+.mob  
+  display: none !important
+  visibility: hidden !important
+
+//分頁bn
+main
+  .bn
+    position: relative
+    display: block
+    overflow: hidden
+    height: 0
+    width: 100%
+    padding-bottom: 13%
+    img
+      width: 100%
+      display: block
+      -o-object-fit: cover
+      object-fit: cover
+      top: 50%
+      left: 50%
+      position: absolute
+      -webkit-transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)
+  .page-title
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    text-align: center
+    text-shadow: Black 0em 0em 0.2em
+    color: #fff
+    h2
+      display: block
+      font-size: 28px
+      font-weight: 600
+      position: relative
+      font-weight: 600
+      letter-spacing: 2px
+
+/*大標*/
+.title, .title_w
+  h2
+    color: #000
+    font-size: 35px
+    letter-spacing: 2px
+    font-weight: 900
+  h4
+    color: $Main-color
+    font-size: 25px
+    font-weight: 300
+    margin-bottom: 10px
+    font-family: "Montserrat", sans-serif
+.title_w
+  h2
+    color: #FFF
+
+.tilte01
+  h2
+    width: fit-content
+    background: $Main-color
+    color: #fff
+    padding: 10px 15px
+    font-size: 20px
+    font-weight: 400
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+  hr
+    margin: 0
+
+.title_line
+  hr
+    background: #E8E8E8
+    height: 4px
+    position: relative
+    &::before
+      content: ""
+      background: $Main-color
+      width: 120px
+      height: 5px
+      left: 0
+      bottom: 0
+      position: absolute
+  h3
+    color: $Main-color
+    font-size: 22px
+
+
+//多圖相簿
+.pics
+  margin-top: 30px
+  text-align: center
+  h4
+    margin-top: 10px
+    color: $Dark-gray
+  .pics-img
+    border: solid 1px $Lights-gray
+    position: relative
+    display: block
+    overflow: hidden
+    img
+      +imgimgs
+      +hover-transition  				
+  &:hover
+    .pics-img
+      img
+        transform: scale(1.1)	
+
+
+h3.product_detail
+  display: inline-block
+  background: $Light-gray
+  padding: 10px 20px
+  color: #FFF
+  font-size: 22px
+				
+.frame
+  box-shadow: 0 0 0px 20px #CFCFCF inset
+  background: transparent
+  padding: 5% 8%
+.frame02
+  box-shadow: none
+  border: 1px solid $Main-color     
+  
+/*產品
+.product__carousel
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide
+        position: relative
+        -webkit-transition: border .15s linear
+        transition: border .15s linear
+        border: 1px solid #ebebeb
+        border-radius: 3px
+        cursor: pointer
+        overflow: hidden
+        height: calc(100% - 8px)
+        &.swiper-slide-thumb-active
+          border-color: #001E6D !important
+        img
+          position: absolute
+          left: 50%
+          top: 50%
+          -webkit-transform: translate(-50%, -50%)
+          transform: translate(-50%, -50%)
+          // max-width: 100%
+          max-width: fit-content
+          // height: 100%
+          height: 80%
+      .easyzoom-flyout
+        img
+          transform: translate(0, 0)
+          min-width: 100%
+          min-height: 100%
+          
+.product__carousel
+  display: block
+  max-width: 700px
+  margin: 1em auto 3em
+  a
+    display: block
+    margin-bottom: 15px
+
+    position: relative
+    display: -webkit-box
+    display: flex
+    -webkit-box-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    align-items: center
+    width: 100%
+    height: 100%
+  .swiper-button-next.swiper-button-white, .swiper-button-prev.swiper-button-white
+    color: #E6E6E6
+  .gallery-top 
+    margin-bottom: 5px
+    height: 405px !important
+    .swiper-slide 
+      position: relative
+      overflow: hidden
+      a 
+        position: relative
+        display: -webkit-box
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%
+        img
+          width: 100%
+          height: 100%
+          -o-object-fit: contain
+          object-fit: contain
+      .easyzoom-flyout img
+        min-width: 100%
+        min-height: 100%
+          
+
+//外包工程師新增
+.swiper-container .swiper-slide img
+  width: 75%
+  height: auto
+  object-fit: cover
+
+[class^="swiper-container gallery-thumbs-"] .swiper-slide img
+  width: 100%
+  height: auto
+  object-fit: cover
+
+// 產品
+.swiper-company
+  padding-top: 60px  !important
+  .swiper-slide
+    img
+      width: 100%
+  .swiper-button-next, .swiper-button-prev
+    top: 25px
+    background: $Sup-color
+    outline: none
+    border-radius: 40px
+    width: 40px
+    height: 40px
+  .swiper-button-next:after, .swiper-button-prev:after
+    font-size: 20px
+    font-weight: 900
+    color: $White
+  .swiper-button-prev
+    left: auto
+    right: 60px
+    background: $Main-color
+.swiper-slide-thumb-active
+  border: solid 3px $Dark-gray
+  box-sizing: border-box
+.products-img 
+  display: none
+  img
+    width: 100%
+
+
+// TAB
+ul.tabs
+  // height: 50px
+  // border-bottom: 1px solid $Main-color
+  margin: 0
+  padding: 0
+  float: left
+  list-style: none
+  width: 100%
+
+  li
+    // float: left
+    // height: 50px
+    // border-bottom: 1px solid $Main-color
+    margin: 0
+    cursor: pointer
+    padding: 5px 10px
+    line-height: 31px
+    font-size: 18px
+    font-weight: 600
+    color: #000
+    overflow: hidden
+    position: relative
+    background: $Lights-grays
+    align-items: center
+    display: flex
+    border: 1px solid #aaa
+    border-radius: 4px
+    margin: 6px auto
+  .imgbox
+    +imgbox
+    width: 30px
+    padding-bottom: 30px
+    margin-right: 5px
+    img
+      +imgbox2
+      object-fit: contain
+      height: 100%
+
+ul.tabs li
+  &:hover
+    opacity: 0.9
+
+  &.active
+    border: 1px solid #ff5000
+    color: #ff5000
+    
+
+  
+.ajax-box
+  width: 100%
+  max-width: 500px !important
+  min-height: 560px !important
+.tab_container
+  clear: both
+  float: left
+  width: 100%
+  background: #fff
+  overflow: auto
+
+.tab_content
+  padding: 20px 30px
+  display: none
+
+.tab_drawer_heading
+  display: none
+
+.tab_style
+  h1
+    color: $Main-color
+    font-weight: 700
+    font-size: 32px
+  p
+    color: $Main-color
+    font-size: 20px
+    padding: 15px 0
+    font-weight: 700
+.tab_a
+  margin-left: 10px
+  cursor: pointer
+  color: $Secondary-coloring !important
+  &:hover
+    color: $Sup-color !important
+.tab_b
+  color: $Main-color
+  font-weight: 700
+  text-decoration: underline
+  cursor: pointer
+  text-align: left
+  p
+    font-size: 18px !important
+  &:hover
+    p
+      color: $Sup-color !important
+.tab_button
+  button
+    width: 100%
+.tab_line
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 30px
+  p
+    color: $Main-color
+    font-weight: 700
+    font-size: 18px !important
+  .line01
+    width: 33.333%
+    height: 1px
+    background-color: $Main-color
+.fb-btn , .google-btn
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  padding: 3px 0 !important
+  font-weight: 600
+.fb-btn
+  background-color: #3B5998
+  color: $White
+  &:hover
+    background-color: #2d4373
+.google-btn
+  background-color: #4285F4
+  color: $White
+  &:hover
+    background-color: #2d5ead
+.tab_pre
+  cursor: pointer
+
+@media screen and ( max-width: 1440px )
+  //首頁產品介紹  
+  .block02 .block-left .infobox, .block02 .block-right .infobox
+    font-size: 20px
+
+@media screen and (max-width: 1366px)
+  .pd-title
+    font-size: 20px
+  /*產品
+  .product__carousel .gallery-top
+    height: 400px !important
+  //門市位置內頁
+  .store-info
+    .col-lg-7
+      .d-flex
+        p
+          &:nth-of-type(2)
+            margin-left: 20px
+
+@media screen and (max-width: 1200px)
+  //首頁產品介紹
+  .block02 .block-left .infobox, .block02 .block-right .infobox
+    font-size: 18px
+  //聯絡我們
+  .contact-box
+    .leftbox
+      h3
+        font-size: 20px 
+    .rightbox  
+      h3
+        font-size: 20px
+
+@media screen and (max-width: 1024px)
+  /*產品
+  .product__carousel .gallery-top
+    height: 300px !important
+
+@media screen and (max-width: 991px)
+  .btn_more, .btn_more_w
+    p
+      margin-right: 60px
+    &:hover
+      p
+        &::before
+          right: 10%
+  .btn_more_w 
+    p
+      &::before
+        right: 20%
+  /*大標*/
+  .title
+    h2
+      font-size: 26px
+  //門市位置內頁
+  .store-info
+    .col-lg-7
+      padding-top: 20px
+      padding-left: 0
+  //首頁產品
+  a.producta 
+    .product
+      border-radius: 5px
+    .product p
+      font-size: 16px
+      font-weight: 500
+
+  .info-box
+    .icon
+      margin: 0px 0 20px 0
+      display: flex
+      align-items: center 
+      span
+        margin: 6px 0
+        width: 60px
+        display: block
+        i
+          background: #FFF
+          color: $Light-gray
+          border: solid 2px $Lights-gray
+          padding: 8px 8px 10px 8px
+          border-radius: 100px
+          font-size: 20px
+      p
+        font-size: 16px
+        line-height: 20px
+        width: calc( 100% - 60px )
+  
+  //首頁最新消息
+  .index-news 
+    padding: 15px 10px
+    img
+      width: 18px
+      margin-right: 10px
+  
+  //首頁關於我們
+  .index-about
+    .desbox
+      margin-bottom: 20px
+      padding-right: 0
+    .imgbox
+      padding-bottom: 80%
+  .index-feature
+    margin-top: 20px
+    .featurebox
+      padding: 8px 12px
+      margin-bottom: 10px
+  //首頁聯絡我們
+  .index-contact 
+    .textbox 
+      h5
+        margin: 10px auto 20px
+        width: 90%
+
+  //首頁產品介紹
+  .block02
+    .block-left, .block-right
+      .imgbox
+        border-radius: 10px
+    .block-left
+      .infobox
+        .pt-3
+          display: none
+      .btnbox
+        margin-top: 10px
+        border-radius: 5px
+        button
+          padding: 10px 45px
+    .block-right
+      .block-bottom
+        .infobox
+          .pt-3
+            display: none
+        .btnbox
+          margin-top: 10px
+          border-radius: 5px
+          button
+            padding: 10px 45px
+  //首頁推薦商品
+  .recommend
+    h4
+      font-size: 18px
+    .swiper-button-next, .swiper-button-prev
+      &::after
+        font-size: 16px
+    .swiper-button-next
+      right: -10px !important
+    .swiper-button-prev
+      left: -10px !important
+    .swiper-products03
+      margin: 0 20px
+  //分頁門市位置
+  .store02
+    .maps
+      padding-bottom: 40%
+  .store, .store02
+    .textbox
+      padding: 20px
+
+  //分頁聯絡我們
+  .form-box
+    margin-top: 40px
+
+  //聯絡我們
+  .contact-box
+    margin-bottom: 30px
+    .leftbox,.rightbox 
+      width: 100%
+      padding: 10px 20px
+       
+@media screen and (max-width: 768px)
+  h3.product_detail
+    font-size: 20px
+  
+  .btn_more
+    padding: 6px 8px
+    p
+      font-size: 16px
+      letter-spacing: 0px
+
+  /*產品
+  .product__carousel
+    display: none
+    .gallery-thumbs 
+      .swiper-slide
+        height: calc(100% - 38px) !important
+  .products-img
+    display: block
+
+  
+  //內頁產品
+  a.productb 
+    .product02 
+      border-radius: 10px
+      padding: 2% 2% 10%
+      h2
+        font-size: 20px
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        overflow: hidden
+        -webkit-line-clamp: 1
+  
+  //首頁關於我們
+  .index-about 
+    .linkbox 
+      .linkbox01
+        &:nth-child(2)
+          transform: translateX(0px)
+
+  //首頁產品介紹
+  .block02
+    display: flex
+    .block-left
+      position: relative
+      padding: 10px
+      width: 100%
+      .imgbox
+        padding-bottom: calc(56% - 10px)
+        img
+          width: 50%
+      .infobox
+        width: 90%
+        height: 90%
+        flex-direction: column
+    .block-right
+      width: 100%
+      display: flex
+      flex-wrap: wrap
+      .infobox
+        height: 84%
+        flex-direction: column
+      .block-bottom
+        position: relative
+        padding: 10px
+        width: 100%
+
+  //首頁聯絡我們
+  .index-contact 
+    .imgbox
+      padding-bottom: 50%
+      img
+        height: 100%
+    .textbox
+      h3
+        letter-spacing: 0
+      h5
+        width: 100%
+
+@media screen and (max-width: 667px)
+  .banner
+    .swiper-banner 
+      .swiper-slide
+        padding-bottom: 100%
+  .pc
+    display: none !important
+    visibility: hidden !important
+  .mob  
+    display: block !important
+    visibility: visible !important
+ 
+@media screen and (max-width: 575px)
+  .btn_back
+    p
+      margin-right: 0px
+      &::before
+        left: -80%
+    &:hover
+      p
+        &::before
+          left: -100%
+  main 
+    .bn
+      padding-bottom: 70%
+      img
+        height: 100%
+  //首頁聯絡我們
+  .index-contact 
+    .imgbox
+      padding-bottom: 100%
+  //分頁聯絡我們
+  .contact
+    &::after
+      width: 90%
+  //首頁關於我們
+  .index-about 
+    .linkbox 
+      .linkbox01
+        padding: 8% 10%
+        &:nth-child(1),&:nth-child(2)
+          h4
+            &::before
+              width: 30px
+              height: 30px
+        h4
+          font-size: 16px
+  //產品內頁
+  .pd
+    flex-direction: column-reverse
+    .norm 
+      .name
+        width: 50px
+      .des
+        width: calc(100% - 50px)
+    .locate
+      width: 90%
+    .pay01 
+      padding: 10px
+      margin-right: 10px
+      span, p
+        font-size: 14px
+    .paint01, .form01 
+      padding: 4px 16px
+      p
+        font-size: 14px
+  //常見問題
+  .guest, .official 
+    .imgbox
+      width: 50px
+      height: 50px
+      border-radius: 10px
+    .textbox
+      width: calc(100% - 70px)
+      padding-left: 0
+    .namebox
+      flex-direction: column
+      align-items: flex-start
+      span
+        font-size: 14px
+  //門市位置內頁
+  .store-info
+    .col-lg-7
+      .d-flex
+        p
+          &:nth-of-type(2)
+            margin-left: 0px
+
+  .banner 
+    .swiper-banner 
+      .swiper-button-next, .swiper-button-prev
+        &::after
+          font-size: 30px
+  // 共用樣式-按鈕
+  .btn
+    font-size: 18px !important
+    &:hover
+      font-size: 18px !important
+
+  .title_line h3
+    font-size: 22px
+  //聯絡我們
+  .contact-box
+    margin-bottom: 10px
+    .rightbox 
+      &::before
+        right: 0%
+        left: auto
+      h3
+        text-align: left
+        font-size: 18px
+        i
+          font-size: 24px
+
+@media screen and (max-width: 450px)
+  //聯絡我們
+  .contact-box
+    .rightbox,.leftbox 
+      padding: 10px 10px
+      h3
+        font-size: 16px
+      &::before
+        width: 30px
+
+  article
+    section
+      .container
+        .index-links-prev-next
+          position: relative
+          .swiper-button-next, .swiper-button-prev
+            top: -130px
+            background: $Main-color
+            outline: none
+            border-radius: 40px
+            width: 40px
+            height: 40px
+          .swiper-button-next:after, .swiper-button-prev:after
+            font-size: 20px
+            font-weight: 900
+            color: $White
+          .swiper-button-next
+            left: auto
+            right: 0px
+          .swiper-button-prev
+            left: auto
+            right: 50px
+ 
+@media screen and (max-width: 360px)
+  //聯絡我們
+  .contact-box
+    .rightbox,.leftbox 
+      &::before
+        width: 15px

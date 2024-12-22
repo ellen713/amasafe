@@ -1,0 +1,65 @@
+
+.button_ok{
+	cursor:pointer;
+	border:none;
+    background:#F3A9AA;
+	color: #FFF;
+    font-size: 16px;
+}
+
+
+
+#btn{
+    color: #FFF;
+	padding: 0;
+	background:#F3A9AA;
+}
+#bg{
+	position:fixed;
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	background:rgba(0, 0, 0, .4);
+	display: none;
+}
+
+#alertBox{
+	margin:200px auto 0;
+	text-align:center;
+	padding:25px;
+	width:40%;
+	background:#FFF;
+	border-radius:3px;
+	box-shadow:2px 2px rgba(0, 0, 0, .3);
+}
+#alertBox input{
+	width:70%;
+}
+#alertBox button.btn-secondary{
+	background:#85CBBF;
+	color: #FFF;
+	margin: 0px 10px;
+}
+
+
+#alertBox p{
+	font-size:1.4em;
+	margin-bottom:20px;
+}
+
+#alertBox #ok{
+	padding:5px 20px;
+	font-size:1em;
+}
+
+@media screen and (max-width: 768px) {
+	#alertBox{
+		padding:15px;
+		width:90%;
+		background:#FFF;
+	}
+	#alertBox input{
+		width:67%;
+	}
+}
